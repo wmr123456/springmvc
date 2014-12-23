@@ -1,6 +1,7 @@
 package com.shinowit.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 /**
  * Created by Administrator on 2014/12/17.
@@ -24,6 +25,7 @@ public class StuEntity {
 
     @Basic
     @Column(name = "name")
+    @Size(min = 3,max = 30,message = "用户名应介于3—30之间！")
     public String getName() {
         return name;
     }
